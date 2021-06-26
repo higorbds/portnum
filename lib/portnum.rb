@@ -1,8 +1,13 @@
-# frozen_string_literal: true
+require "#{File.expand_path(File.dirname(__FILE__))}/portnum/version"
 
-require_relative "portnum/version"
+class Numeric
 
-module Portnum
-  class Error < StandardError; end
-  # Your code goes here...
+  def par?
+    self % 2 == 0
+  end
+  
+  def impar?
+    self % 2 == 1
+  end
+
 end
